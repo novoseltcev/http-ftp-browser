@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <Tab text="HTTP/HTTPS">
+        <BorderPane>
+            <right>
+                <Pane prefHeight="260" prefWidth="15" BorderPane.alignment="CENTER" />
+            </right>
+            <left>
+                <Pane prefHeight="260" prefWidth="15" BorderPane.alignment="CENTER" />
+            </left>
+            <top>
+                <Pane prefHeight="15" prefWidth="380" BorderPane.alignment="CENTER" />
+            </top>
+            <bottom>
+                <Pane prefHeight="15" prefWidth="380" BorderPane.alignment="CENTER" />
+            </bottom>
+            <center>
+                <VBox alignment="CENTER" prefHeight="270.0" prefWidth="570.0" BorderPane.alignment="CENTER_RIGHT">
+                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="593.0" text="Enter url to see html page">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="570.0" />
+                    <HBox alignment="CENTER" prefHeight="26.0" prefWidth="546.0">
+                        <ChoiceBox fx:id="choiceProtocol" prefHeight="26.0" prefWidth="97.0" />
+                        <TextField fx:id="urlTextField" onAction="#enterHtmlType" prefHeight="26.0" prefWidth="432.0" />
+                    </HBox>
+                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="570.0" />
+                    <Button fx:id="openButton" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" onAction="#openHtmlAction" prefHeight="33.0" prefWidth="100.0" text="Open" />
+                </VBox>
+            </center>
+        </BorderPane>
+    </Tab>
+
+    <Tab text="FTP">
+        <BorderPane>
+            <right>
+                <Pane prefHeight="260" prefWidth="15" BorderPane.alignment="CENTER" />
+            </right>
+            <left>
+                <Pane prefHeight="260" prefWidth="15" BorderPane.alignment="CENTER" />
+            </left>
+            <top>
+                <Pane prefHeight="15" prefWidth="380" BorderPane.alignment="CENTER" />
+            </top>
+            <bottom>
+                <Pane prefHeight="15" prefWidth="380" BorderPane.alignment="CENTER" />
+            </bottom>
+            <center>
+                <VBox alignment="CENTER" prefHeight="270.0" prefWidth="570.0" BorderPane.alignment="CENTER_RIGHT">
+                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="593.0" text="Enter host to connection">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="570.0" />
+                    <HBox alignment="CENTER" prefHeight="26.0" prefWidth="570.0">
+                        <Label prefHeight="26.0" prefWidth="39.0" text="FTP">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="ftpTextField" onAction="#enterFtpType" prefHeight="26.0" prefWidth="462.0" />
+                    </HBox>
+                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="570.0" />
+                    <HBox alignment="CENTER" prefHeight="33.0" prefWidth="570.0">
+                        <Text fx:id="chosenDirName" nodeOrientation="RIGHT_TO_LEFT" text="Choose location..." wrappingWidth="162.10498046875" HBox.hgrow="NEVER" />
+                        <Pane layoutX="296.0" layoutY="10.0" prefHeight="33.0" prefWidth="25" />
+                        <Button fx:id="dirButton" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" onAction="#openDirAction" prefHeight="33.0" prefWidth="100.0" text="Open" />
+                        <Pane prefHeight="33.0" prefWidth="116.0" />
+                        <Button fx:id="downloadButton" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" onAction="#downloadAction" prefHeight="33.0" prefWidth="100.0" text="Connect" />
+                    </HBox>
+                </VBox>
+            </center>
+        </BorderPane>
+    </Tab>
+</TabPane>

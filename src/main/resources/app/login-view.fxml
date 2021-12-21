@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="147.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="200" prefWidth="350" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+        <HBox prefHeight="19.0" prefWidth="350">
+            <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="280.0" textFill="#d72121" />
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="350">
+            <Label alignment="CENTER_RIGHT" prefHeight="26" prefWidth="68" text="Username">
+                <HBox.margin>
+                    <Insets right="10.0" />
+                </HBox.margin>
+            </Label>
+            <TextField fx:id="userField" />
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="280.0">
+            <Label alignment="CENTER_RIGHT" prefHeight="26" prefWidth="68" text="Password" textAlignment="RIGHT">
+                <HBox.margin>
+                    <Insets right="10.0" />
+                </HBox.margin>
+            </Label>
+            <PasswordField fx:id="passwordField" />
+        </HBox>
+        <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="280.0">
+            <opaqueInsets>
+                <Insets right="40.0" />
+            </opaqueInsets>
+            <Button mnemonicParsing="false" onAction="#login" text="Login">
+                <HBox.margin>
+                    <Insets right="40.0" />
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>
